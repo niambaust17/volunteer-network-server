@@ -51,7 +51,7 @@ client.connect(err =>
         eventCollection.findOneAndDelete({ _id: id })
             .then(result =>
             {
-                res.json({ success: !!data.value })
+                res.json({ success: !!result.value })
             })
             .then(error =>
             {
